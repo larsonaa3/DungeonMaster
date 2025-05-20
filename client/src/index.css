@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 0 69% 32%; /* #7c2128 burgundy */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 260 10% 32%; /* #564e58 gray-purple */
+    --secondary-foreground: 24 9.8% 10%;
+    --accent: 42 89% 38%; /* #b8860b goldenrod */
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 0 69% 32%;
+    --radius: 0.5rem;
+    --chart-1: 0 69% 32%;
+    --chart-2: 260 10% 32%;
+    --chart-3: 42 89% 38%;
+    --chart-4: 0 84.2% 60.2%;
+    --chart-5: 235 66% 50%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 20 14.3% 4.1%;
+    --sidebar-primary: 0 69% 32%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 260 10% 32%;
+    --sidebar-accent-foreground: 24 9.8% 10%;
+    --sidebar-border: 20 5.9% 90%;
+    --sidebar-ring: 0 69% 32%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --primary: 0 69% 45%; /* lighter burgundy for dark mode */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 260 10% 55%; /* lighter gray-purple for dark mode */
+    --secondary-foreground: 60 9.1% 97.8%;
+    --accent: 42 89% 45%; /* lighter goldenrod for dark mode */
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 0 69% 45%;
+    --chart-1: 0 69% 45%;
+    --chart-2: 260 10% 55%;
+    --chart-3: 42 89% 45%;
+    --chart-4: 0 72.2% 50.6%;
+    --chart-5: 235 66% 60%;
+    --sidebar-background: 20 14.3% 4.1%;
+    --sidebar-foreground: 60 9.1% 97.8%;
+    --sidebar-primary: 0 69% 45%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 260 10% 55%;
+    --sidebar-accent-foreground: 60 9.1% 97.8%;
+    --sidebar-border: 12 6.5% 15.1%;
+    --sidebar-ring: 0 69% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .ability-score-box {
+    @apply h-20 w-20 flex flex-col items-center justify-center relative;
+  }
+  
+  .modifier-circle {
+    @apply absolute -bottom-2.5 h-9 w-9 flex items-center justify-center rounded-full z-10;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .proficiency-checkbox:checked + .checkbox-label {
+    @apply bg-primary text-white;
+  }
+}
+
+.font-header {
+  font-family: 'Crimson Text', serif;
+}
+
+.font-body {
+  font-family: 'Roboto', sans-serif;
+}
